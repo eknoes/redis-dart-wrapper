@@ -23,5 +23,8 @@ main() async {
     
     // Use it for commands
     String result = await redis.send(["SMEMBERS", "project_ids"]);
+    
+    // Close Connection
+    await redis.close();
 }
 ```

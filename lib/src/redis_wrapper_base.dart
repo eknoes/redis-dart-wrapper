@@ -58,4 +58,9 @@ class RedisWrapper {
     }
   }
 
+  Future close() {
+    _cmd = null;
+    return _connection.close();
+  }
+
 }
