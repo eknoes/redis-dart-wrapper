@@ -19,7 +19,6 @@ pipeline {
                                 {
                                     echo "Install Dart dependencies"
                                     sh 'pub get'
-                                    sh 'pub global activate junitreport'
                                     sh 'pub global activate pana'
                                     sh 'pub global activate --source git https://github.com/eknoes/dart-pana-to-junit.git'
                                 },
