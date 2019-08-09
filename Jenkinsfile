@@ -20,6 +20,8 @@ pipeline {
                                     echo "Install Dart dependencies"
                                     sh 'pub get'
                                     sh 'pub global activate junitreport'
+                                    sh 'pub global activate pana'
+                                    sh 'pub global activate --source git https://github.com/eknoes/dart-pana-to-junit.git'
                                 },
 
                         setup_redis:
@@ -43,13 +45,21 @@ pipeline {
                             sh 'pub run test --reporter json > test.json'
                             sh 'pub global run junitreport:tojunit --input test.json --output report.xml'
                         },*/
-                        linter: {
+                        pana: {
                             echo 'Check Health'
-                            sh 'dartanalyzer --options analysis_options.yaml .'
+                            sh 'pub global run pana --no-warning --source path . > out.json'
+                            sh 'pub global run pana_to_junit:main --input out.json --output pana-report.xml'
                         }
                 )
             }
         }
 
     }
+
+    post {
+        always {
+            junit '**/pana-report.xml'
+        }
+    }
+
 }

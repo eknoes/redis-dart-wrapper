@@ -12,3 +12,4 @@ doc/api/
 
 # Remove Intellij
 *.iml
+.idea/*
