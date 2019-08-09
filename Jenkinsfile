@@ -21,7 +21,7 @@ pipeline {
                                     copyArtifacts filter: '.packages', fingerprintArtifacts: true, projectName: 'redis-dart-wrapper/master', optional: true, selector: lastCompleted()
                                     sh 'pub get'
                                     sh 'pub global activate pana'
-                                    sh 'pub global activate --source git https://github.com/eknoes/dart-pana-to-junit.git'
+                                    sh 'pub global activate pana_to_junit'
                                     archiveArtifacts artifacts: '.packages', fingerprint: true
                                 },
 
