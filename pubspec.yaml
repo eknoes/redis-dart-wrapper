@@ -1,6 +1,6 @@
 name: redis_wrapper
 description: A Wrapper using a single connection and logging for redis-dart
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/eknoes/redis-dart-wrapper
 repository: https://github.com/eknoes/redis-dart-wrapper
 author: Sönke Huster <projects@eknoes.de>
