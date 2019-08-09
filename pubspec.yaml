@@ -1,17 +1,16 @@
 name: redis_wrapper
 description: A Wrapper using a single connection and logging for redis-dart
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/eknoes/redis-dart-wrapper
-author: eknoes <projekte@eknoes.de>
+repository: https://github.com/eknoes/redis-dart-wrapper
+author: Sönke Huster <projects@eknoes.de>
 
 environment:
   sdk: '>=2.4.0 <3.0.0'
 
 dependencies:
   logging: ^0.11.3
-  synchronized: ^2.1.0+1
   redis: ^1.1.0
-
 
 dev_dependencies:
   pedantic: ^1.7.0
