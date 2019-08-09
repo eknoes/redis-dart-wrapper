@@ -10,8 +10,7 @@ environment:
 dependencies:
   logging: ^0.11.3
   synchronized: ^2.1.0+1
-  redis:
-    path: ../redis-dart
+  redis: ^1.2.0
 
 
 dev_dependencies:
