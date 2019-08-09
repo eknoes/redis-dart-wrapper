@@ -18,6 +18,7 @@ pipeline {
                         install_dependencies:
                                 {
                                     echo "Install Dart dependencies"
+                                    copyArtifacts filter: '.packages', fingerprintArtifacts: true, projectName: '${JOB_NAME}'
                                     sh 'pub get'
                                     sh 'pub global activate pana'
                                     sh 'pub global activate --source git https://github.com/eknoes/dart-pana-to-junit.git'
