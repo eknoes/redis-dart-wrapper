@@ -1,5 +1,6 @@
-A simple wrapper for [redis-dart](https://github.com/ra1u/redis-dart/) that provides logging and manages a single redis connection as recommended by the author of [redis-dart](https://github.com/ra1u/redis-dart/issues/5#issuecomment-279018105) for maximum performance.
 [![Build Status](https://ci.eknoes.de/buildStatus/icon?job=redis-dart-wrapper%2Fmaster)](https://ci.eknoes.de/job/redis-dart-wrapper/job/master/)
+
+A simple wrapper for [redis-dart](https://github.com/ra1u/redis-dart/) that provides logging and manages a single redis connection as recommended by the author of [redis-dart](https://github.com/ra1u/redis-dart/issues/5#issuecomment-279018105) for maximum performance.
 Currently it relies on some modifications of redis-dart, when these are merged the dependencies are modified to the current upstream version.
 
 ## Usage
